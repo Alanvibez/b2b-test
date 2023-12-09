@@ -1,0 +1,22 @@
+.button {
+    border: 2px;
+    border-radius: 10px;
+    color: $black;
+    background: linear-gradient(90deg, #67310A -108.98%, #F0D683 129.77%);
+    padding: 22px 38px;
+    text-transform: uppercase;
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+  
+  
+    display: inline-block;
+
+    &::after{
+        inset: 4px 5px;
+        padding: 1px;
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,103 @@
+body {
+    color: white;
+    font-family: $secondary-font;
+}
+
+img{
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.wrapper {
+    overflow: hidden;
+}
+
+.link {
+    font-family: $secondary-font;
+    font-size: 14px;
+    color: $gold;
+    font-weight: 400;
+    letter-spacing: normal;
+    border-bottom: 1px dashed $gold;
+}
+
+.title {
+    font-family: $primary-font;
+    font-size: 40px;
+    font-style: normal;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: $secondary-font;
+    font-size: 24px;
+}
+
+.title,
+.subtitle {
+    span {
+        color: $gold;
+    }
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+}
+
+.border {
+    position: relative;
+    border-radius: 8px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 10px;
+        padding: 2px;
+        background: linear-gradient(180deg, $gold, #9f734c);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    &--vertical {
+        &::after {
+            background: linear-gradient(180deg, $gold 0%, #9f734c 100%);
+        }
+    }
+
+    &--horizontal {
+        &::after {
+            background: linear-gradient(90deg, $gold 0%, #9f734c 100%);
+        }
+    }
+
+    &--inset {
+        &::after {
+            inset: 2px;
+        }
+    }
+}
+
+@media (max-width: $breakpointMobile) {
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+}

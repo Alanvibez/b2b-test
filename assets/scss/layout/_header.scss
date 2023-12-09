@@ -1,0 +1,53 @@
+.header {
+    background: $black-secondary;
+    height: 103px;
+    font-family: $secondary-font;
+
+    &__inner{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 26px;
+        color: $gray-light;
+        &-right{
+            display: flex;
+            gap: 74px;
+        }
+    }
+
+    &__logo{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        &-text{
+            max-width: 201px;
+            color: $gold;
+            font-size: 14px;
+            color: $gold-secondary;
+        }
+    }
+
+    &__social{
+        display: flex;
+        gap: 20px;
+    }
+
+    &__phone{
+        font-family: $primary-font;
+        font-size: 20px;
+        color: white;
+        letter-spacing: 1px;
+        text-align: right;
+    }
+}
+
+@media (max-width:$breakpointTablet){
+    .header__inner{
+        padding-top: 0;
+        align-items: center;
+         &-right{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "abstracts/vars";
+
+@import "base/reset";
+@import "base/fonts";
+@import "base/base";
+
+@import "layout/header";
+
+@import "components/buttons";
+
+@import "pages/hero";
+@import "pages/benefits";
+@import "pages/services";
+
+
+.container{
+    width: 100%;
+    max-width: 1540px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
