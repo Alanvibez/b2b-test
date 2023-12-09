@@ -40,8 +40,8 @@
     &-item {
         max-width: 350px;
         flex: 1;
-        margin-bottom: 64px;
         height: 100%;
+        margin-bottom: 64px;
     }
 
     &-number {
@@ -63,10 +63,13 @@
     }
 
     &-button {
-        display: flex;
-        align-items: end;
+        position: relative;
         height: 100%;
-        margin-left: auto;
+        .button{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
 
     &-col {
@@ -118,7 +121,9 @@
         }
 
         &-button {
-            
+            .button{
+                position: relative;
+            }
             margin-left: 0;
         }
     }
